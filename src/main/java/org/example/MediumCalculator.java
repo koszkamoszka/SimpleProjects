@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class mediumCalculator {
+public class MediumCalculator {
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
