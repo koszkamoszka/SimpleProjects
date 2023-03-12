@@ -4,36 +4,60 @@ import java.util.Stack;
 
 
 public class StackCalculator {
+    private static final int UNDEFINED = -1;
 
-    private Stack<Operator> operatorStack;
-    private Stack<Double> valueStack;
+    private final Stack<Operator> operatorStack;
+    private final Stack<Double> valueStack;
 
     public StackCalculator() {
         operatorStack = new Stack<>();
         valueStack = new Stack<>();
     }
 
-    public int calculate(String expression) {
-        double solution = 0;
-        int currentNumber = 0;
+    public double calculate(String expression) {
+        int currentNumber = UNDEFINED;
         for (char symbol : expression.toCharArray()) {
             if (Character.isDigit(symbol)) {
-                currentNumber = currentNumber * 10 + Integer.parseInt(String.valueOf(symbol));
-            } else {
-                valueStack.push((double) currentNumber);
-                if (!operatorStack.empty() && !operatorStack.peek().equals(Operator.LEFT_PARENTHESIS)) {
-
+                if (currentNumber == UNDEFINED) {
+                    currentNumber = 0;
                 }
-                operatorStack.push(Operator.fromSymbol(symbol));
-                solution = performOperation(solution, currentNumber);
-                currentNumber = 0;
+                currentNumber = currentNumber * 10 + Integer.parseInt(String.valueOf(symbol));
+                continue;
+            }
+            Operator operator = Operator.fromSymbol(symbol);
+            if (currentNumber != UNDEFINED) {
+                valueStack.push((double) currentNumber);
+                currentNumber = UNDEFINED;
+            }
+            if (symbol == '(') {
+                operatorStack.push(operator);
+            } else if (symbol == ')') {
+                do {
+                    performLastOperation();
+                } while (!operatorStack.peek().equals(Operator.LEFT_PARENTHESIS));
+                operatorStack.pop();
+            } else {
+                if (!operatorStack.empty() && !operatorStack.peek().equals(Operator.LEFT_PARENTHESIS)) {
+                    performLastOperation();
+                }
+                operatorStack.push(operator);
             }
         }
+        while (!operatorStack.empty()) {
+            performLastOperation();
+        }
 
-        return performOperation(solution, currentNumber);
+        return valueStack.pop();
     }
 
-    public static int performOperation(Operator operation, int leftOperand, int rightOperand) {
+    private void performLastOperation() {
+        double rightOperand = valueStack.pop();
+        double leftOperand = valueStack.pop();
+        Operator prevOperator = operatorStack.pop();
+        valueStack.push(performOperation(prevOperator, leftOperand, rightOperand));
+    }
+
+    private double performOperation(Operator operation, double leftOperand, double rightOperand) {
         switch (operation) {
             case ADDITION -> {
                 return leftOperand + rightOperand;
@@ -46,6 +70,9 @@ public class StackCalculator {
             }
             case DIVISION -> {
                 return leftOperand / rightOperand;
+            }
+            default -> {
+                return 0;
             }
         }
     }
