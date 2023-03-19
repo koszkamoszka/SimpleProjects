@@ -3,7 +3,7 @@ package org.example.sorting;
 public class BubbleSorter implements Sorter {
 
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         for (int k = 0; k < array.length; k++) {
             boolean isSorted = true;
             for (int i = 0; i < array.length - 1; i++) {
@@ -18,5 +18,6 @@ public class BubbleSorter implements Sorter {
                 break;
             }
         }
+        return array;
     }
 }

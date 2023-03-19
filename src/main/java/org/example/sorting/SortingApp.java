@@ -15,8 +15,10 @@ public class SortingApp {
         }
 //        BubbleSorter bubbleSorter = new BubbleSorter();
 //        bubbleSorter.sort(array);
-        InsertionSorter insertionSorter = new InsertionSorter();
-        insertionSorter.sort(array);
+//        InsertionSorter insertionSorter = new InsertionSorter();
+//        insertionSorter.sort(array);
+        MergeSorter mergeSorter = new MergeSorter();
+        array = mergeSorter.sort(array);
         for (int i = 0; i < n; i++) {
             System.out.print(array[i] + " ");
         }
