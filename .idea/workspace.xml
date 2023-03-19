@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83144550-8753-49ae-980a-800b2afadd21" name="Changes" comment="Parenthesis were added to the calculator">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/BubbleSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/InsertionSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/MergeSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/QuickSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/Sorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/SortingApp.java" afterDir="false" />
+    <list default="true" id="83144550-8753-49ae-980a-800b2afadd21" name="Changes" comment="Sorter was created, Bubble sort was created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sorting/BubbleSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/BubbleSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sorting/InsertionSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/InsertionSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sorting/SortingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sorting/SortingApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +69,8 @@
       <updated>1677023298598</updated>
       <workItem from="1677023299688" duration="67000" />
       <workItem from="1677023562284" duration="13440000" />
-      <workItem from="1677677873663" duration="18191000" />
+      <workItem from="1677677873663" duration="18831000" />
+      <workItem from="1679244204925" duration="1875000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1677025414001</created>
@@ -123,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678635111331</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Sorter was created, Bubble sort was created">
+      <created>1678822716365</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678822716365</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +140,7 @@
     <MESSAGE value="classes, interfaces, enum" />
     <MESSAGE value="Changes in Stack calculator" />
     <MESSAGE value="Parenthesis were added to the calculator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parenthesis were added to the calculator" />
+    <MESSAGE value="Sorter was created, Bubble sort was created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sorter was created, Bubble sort was created" />
   </component>
 </project>

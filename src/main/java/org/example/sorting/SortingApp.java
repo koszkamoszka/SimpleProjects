@@ -13,11 +13,14 @@ public class SortingApp {
         for (int i = 0; i < n; i++) {
             array[i] = scanner.nextInt();
         }
-        BubbleSorter bubbleSorter = new BubbleSorter();
-        bubbleSorter.sort(array);
+//        BubbleSorter bubbleSorter = new BubbleSorter();
+//        bubbleSorter.sort(array);
+        InsertionSorter insertionSorter = new InsertionSorter();
+        insertionSorter.sort(array);
         for (int i = 0; i < n; i++) {
             System.out.print(array[i] + " ");
         }
+
     }
 
 }
