@@ -17,8 +17,10 @@ public class SortingApp {
 //        bubbleSorter.sort(array);
 //        InsertionSorter insertionSorter = new InsertionSorter();
 //        insertionSorter.sort(array);
-        MergeSorter mergeSorter = new MergeSorter();
-        array = mergeSorter.sort(array);
+//        MergeSorter mergeSorter = new MergeSorter();
+//        array = mergeSorter.sort(array);
+        QuickSorter quickSorter = new QuickSorter();
+        quickSorter.sort(array);
         for (int i = 0; i < n; i++) {
             System.out.print(array[i] + " ");
         }
